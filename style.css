@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:100%;
+    background-color: darkslateblue;
+}
+#buttons, .button {
+    margin: 1rem;
+}
+#text {
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translateX(-5rem);
+}
+.button {
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    font-size: larger;
+}
+.animF {
+    animation: transF 0.5s linear forwards;
+}
+@keyframes transF {
+    0% {
+        transform: translate(0, 0);
+    } 50% {
+        transform: translate(-12.5rem, 6rem);
+    } 100% {
+        transform: translate(-25rem, 0rem);
+    }
+}
+.animB {
+    animation: transB 0.5s linear forwards;
+}
+@keyframes transB {
+    0% {
+        transform: translate(-25rem, 0rem);
+    }
+    50% {
+        transform: translate(-12.5rem, 6rem);
+    } 100% {
+        transform: translate(0, 0);
+    }
+}
