@@ -24,9 +24,6 @@ html, body {
     height: 3rem;
     font-size: larger;
 }
-.animF {
-    animation: transF 0.5s linear forwards;
-}
 @keyframes transF {
     0% {
         transform: translate(0, 0);
@@ -35,9 +32,6 @@ html, body {
     } 100% {
         transform: translate(-25rem, 0rem);
     }
-}
-.animB {
-    animation: transB 0.5s linear forwards;
 }
 @keyframes transB {
     0% {
