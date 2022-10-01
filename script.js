@@ -1,12 +1,14 @@
 const no = document.getElementById('no');
+let moving = false;
+
 no.addEventListener('mouseover', () => {
-    if (no.classList.contains('animF')) {
-        no.classList.remove('animF');
-        no.classList.add('animB');
-    } else if (no.classList.contains('animB')) {
-        no.classList.remove('animB');
-        no.classList.add('animF');
+    if (moving) {return;}
+    void no.offsetWidth;
+    if (no.style.animation.includes('transF')) {
+        no.style.animation = 'transB 0.5s linear forwards';
     } else {
-        no.classList.add('animF');
+        no.style.animation = 'transF 0.5s linear forwards';
     }
+    moving = true;
+    setTimeout(()=> {moving = false;}, 500);
 });
